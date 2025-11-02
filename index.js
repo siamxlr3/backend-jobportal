@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5173","https://job-portal-six-brown.vercel.app"],
+    origin: ["http://localhost:5173","https://job-portal-roan-seven.vercel.app"],
     credentials: true
 }))
 
@@ -25,7 +25,7 @@ async function main(){
     await mongoose.connect(process.env.UB_URL);
 
     app.get('/', (req, res) => {
-        res.send('Welcome to the Shopping App!');
+        res.send('Welcome to the JobPortal App!');
     })
 }
 main().then(()=>console.log("mongoDB connected")).catch(err => console.log(err));
